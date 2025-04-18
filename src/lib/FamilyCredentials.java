@@ -12,6 +12,7 @@ import java.util.List;
  *
  * @author alienware
  */
+//dataclumps
 public class FamilyCredentials {
     public String spouseName;
     public String spouseIdNumber;

@@ -9,6 +9,7 @@ package lib;
  *
  * @author alienware
  */
+//dataclumps
 public class IncomeCredentials {
     public int monthlySalary;
     public int otherMonthlyIncome;
