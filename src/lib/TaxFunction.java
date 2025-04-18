@@ -11,19 +11,19 @@ package lib;
  */
 public class TaxFunction {
 
-    public static int calculateTax(int monthlySalary, int otherMonthlyIncome, int numberOfMonthWorking, int deductible, boolean isMarried, int numberOfChildren) {
+    public static int calculateTax(EmployeeTaxData data) {
 
-        numberOfMonthWorking = validateWorkingMonths(numberOfMonthWorking);
-        numberOfChildren = validateNumberOfChildren(numberOfChildren);
+    data.numberOfMonthWorking = validateWorkingMonths(data.numberOfMonthWorking);
+    data.numberOfChildren = validateNumberOfChildren(data.numberOfChildren);
 
-        int annualIncome = calculateAnnualIncome(monthlySalary, otherMonthlyIncome, numberOfMonthWorking);
-        int nonTaxableIncome = calculateNonTaxableIncome(isMarried, numberOfChildren);
+    int annualIncome = calculateAnnualIncome(data.monthlySalary, data.otherMonthlyIncome, data.numberOfMonthWorking);
+    int nonTaxableIncome = calculateNonTaxableIncome(data.isMarried, data.numberOfChildren);
 
-        int taxableIncome = annualIncome - deductible - nonTaxableIncome;
-        int tax = calculateFinalTax(taxableIncome);
+    int taxableIncome = annualIncome - data.deductible - nonTaxableIncome;
+    int tax = calculateFinalTax(taxableIncome);
 
-        return tax;
-    }
+    return tax;
+}
 
     private static int validateWorkingMonths(int months) {
         if (months > 12) {
