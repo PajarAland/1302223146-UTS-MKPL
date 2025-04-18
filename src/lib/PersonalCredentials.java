@@ -11,7 +11,7 @@ import java.time.LocalDate;
  *
  * @author alienware
  */
-public class PersonalInfo {
+public class PersonalCredentials {
     public String employeeId;
     public String firstName;
     public String lastName;
@@ -25,7 +25,7 @@ public class PersonalInfo {
         MALE, FEMALE
     }
 
-    public PersonalInfo(String employeeId, String firstName, String lastName, String idNumber,
+    public PersonalCredentials(String employeeId, String firstName, String lastName, String idNumber,
                         String address, LocalDate joinDate, boolean isForeigner, Gender gender) {
         this.employeeId = employeeId;
         this.firstName = firstName;

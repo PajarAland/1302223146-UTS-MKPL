@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author alienware
  */
-public class FamilyInfo {
+public class FamilyCredentials {
     public String spouseName;
     public String spouseIdNumber;
     public List<String> childNames = new LinkedList<>();
