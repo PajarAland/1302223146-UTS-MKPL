@@ -8,7 +8,9 @@ Rekap Refactoring_1302223146_Fajar Jelang Ramadhan
 
 -Primitive Obsession: Field Gender diubah dari boolean menjadi enum di PersonalInfo
 
--Data Clumps: Data yang sering muncul bersama (pendapatan dan keluarga) sudah dipindahkan ke class IncomeDetail dan FamilyInfo.
+-Data Clumps: Data yang sering muncul bersama (pendapatan dan keluarga) sudah dipindahkan ke class IncomeCredentials dan FamilyCredentials.
+
+-Comment: Menghapus comment-comment code panjang yang tidak penting
 
 Referensi: Slide Pertemuan 3 - Refactoring, https://refactoring.guru
 
