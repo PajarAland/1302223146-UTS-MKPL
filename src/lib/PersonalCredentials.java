@@ -20,7 +20,8 @@ public class PersonalCredentials {
     public LocalDate joinDate;
     public boolean isForeigner;
     public Gender gender;
-
+    
+    //primitive obsession
     public enum Gender {
         MALE, FEMALE
     }
