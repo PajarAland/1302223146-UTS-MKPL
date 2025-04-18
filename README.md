@@ -10,3 +10,5 @@ Rekap Refactoring_1302223146_Fajar Jelang Ramadhan
 
 -Data Clumps: Data yang sering muncul bersama (pendapatan dan keluarga) sudah dipindahkan ke class IncomeDetail dan FamilyInfo.
 
+Referensi: Slide Pertemuan 3 - Refactoring, https://refactoring.guru
+
