@@ -13,40 +13,40 @@ import java.time.LocalDate;
  * @author alienware
  */
 public class Employee {
-    private PersonalInfo personalInfo;
-    private FamilyInfo familyInfo;
-    private IncomeDetail incomeDetail;
+    private PersonalCredentials personalCreds;
+    private FamilyCredentials familyCreds;
+    private IncomeCredentials incomeDetail;
 
-    public Employee(PersonalInfo personalInfo) {
-        this.personalInfo = personalInfo;
-        this.familyInfo = new FamilyInfo();
-        this.incomeDetail = new IncomeDetail();
+    public Employee(PersonalCredentials personalInfo) {
+        this.personalCreds = personalInfo;
+        this.familyCreds = new FamilyCredentials();
+        this.incomeDetail = new IncomeCredentials();
     }
 
-    public FamilyInfo getFamilyInfo() {
-        return familyInfo;
+    public FamilyCredentials getFamilyInfo() {
+        return familyCreds;
     }
 
-    public IncomeDetail getIncomeDetail() {
+    public IncomeCredentials getIncomeDetail() {
         return incomeDetail;
     }
 
     public void setMonthlySalaryByGrade(int grade) {
-        incomeDetail.setMonthlySalaryByGrade(grade, personalInfo.isForeigner);
+        incomeDetail.setMonthlySalaryByGrade(grade, personalCreds.isForeigner);
     }
 
     public int getAnnualIncomeTax() {
         LocalDate now = LocalDate.now();
-        int monthsWorked = (now.getYear() == personalInfo.joinDate.getYear()) ?
-            now.getMonthValue() - personalInfo.joinDate.getMonthValue() : 12;
+        int monthsWorked = (now.getYear() == personalCreds.joinDate.getYear()) ?
+            now.getMonthValue() - personalCreds.joinDate.getMonthValue() : 12;
 
         EmployeeTaxData data = new EmployeeTaxData(
             incomeDetail.monthlySalary,
             incomeDetail.otherMonthlyIncome,
             monthsWorked,
             incomeDetail.annualDeductible,
-            familyInfo.isMarried(),
-            familyInfo.getNumberOfChildren()
+            familyCreds.isMarried(),
+            familyCreds.getNumberOfChildren()
         );
 
         return TaxFunction.calculateTax(data);

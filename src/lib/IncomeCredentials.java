@@ -9,7 +9,7 @@ package lib;
  *
  * @author alienware
  */
-public class IncomeDetail {
+public class IncomeCredentials {
     public int monthlySalary;
     public int otherMonthlyIncome;
     public int annualDeductible;
